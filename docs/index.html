@@ -1,0 +1,46 @@
+<html>
+<script type = "text/javascript" src="multiple-word-replacer.js"></script>
+<script language="javascript">
+const separeter = {
+	'csv': ',',
+	'tsv': '\t'
+};
+
+function generate(){
+	let selected_separeter = document.getElementById('separater_type').value;
+
+	let inputedDictionary = document.getElementById('input_dictionary').value;
+	let before = document.getElementById('input_text').value;
+
+	after = multiWordReplacer(inputedDictionary,selected_separeter, before);
+	let outputText = document.getElementById('output_text');
+	outputText.value  = after;
+}
+
+
+</script>
+<link rel = "stylesheet" href="style.css">
+<body>
+	multi to multi replacer
+	<div id = "dictionary_input_area">
+		<div id = "ui_area1">
+			separator formatt :
+			<select id = "separater_type">
+				<option value = "csv">CSV</option>
+				<option value = "tsv">TSV</option>
+			</select>
+		</div>
+		<textarea id="input_dictionary" class="input_area"></textarea>
+	</div>
+	text for replace
+	<div id="input_area">
+		<textarea id = "input_text" class = "input_area"></textarea>
+	</div>
+	<div id = "ui_area">
+		<input type = "button" name = "generate" value= "generate" onClick="generate()">
+	</div>
+	<div id = "output_area">
+		<textarea id = "output_text" class="input_area"></textarea>
+	</div>
+</body>
+</html>
