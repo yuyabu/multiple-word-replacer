@@ -21,7 +21,7 @@ Enter the following text in "dictionary text" field
 cat,dog
 dog,goat
 goat,cat
-``
+```
 
 Enter the following text in "text for replace" field
 
