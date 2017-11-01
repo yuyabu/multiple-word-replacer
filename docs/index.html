@@ -1,11 +1,16 @@
 <html>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 <script type = "text/javascript" src="multiple-word-replacer.js"></script>
 <script language="javascript">
 const separeter = {
 	'csv': ',',
 	'tsv': '\t'
 };
-
 function generate(){
 	let selected_separeter = document.getElementById('separater_type').value;
 
@@ -16,31 +21,39 @@ function generate(){
 	let outputText = document.getElementById('output_text');
 	outputText.value  = after;
 }
-
-
 </script>
-<link rel = "stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
-	multi to multi replacer
-	<div id = "dictionary_input_area">
-		<div id = "ui_area1">
-			separator formatt :
-			<select id = "separater_type">
-				<option value = "csv">CSV</option>
-				<option value = "tsv">TSV</option>
-			</select>
+	<h1>multi to multi replace </h1>
+	<div class="col-md-4">
+		<div class="panel panel-default">
+			<div class="panel-heading"> exchange map</div>
+			<div class="panel-body">
+				<label for="separater type">separator formatt:</label>
+				<select class="form-control" id="separater_type">
+					<option value="csv" selected>CSV</option>
+					<option value="tsv">TSV</option>
+				</select>
+				<label for="input_dictionary">dictionary text</label>
+				<textarea id = "input_dictionary" class="form-control" rows="8"></textarea>
+			</div>
 		</div>
-		<textarea id="input_dictionary" class="input_area"></textarea>
 	</div>
-	text for replace
-	<div id="input_area">
-		<textarea id = "input_text" class = "input_area"></textarea>
-	</div>
-	<div id = "ui_area">
-		<input type = "button" name = "generate" value= "generate" onClick="generate()">
-	</div>
-	<div id = "output_area">
-		<textarea id = "output_text" class="input_area"></textarea>
-	</div>
+	<div class="col-md-8">
+			<div class="panel panel-default">
+				<div class="panel-heading">text</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<label for="input_text">text for replace</label>
+						<textarea id = "input_text" class="input_area form-control" rows="5"></textarea>
+					</div>
+					<input type="button" class="btn btn-primary" name="generate" value="convert" onClick="generate()">
+					<div class="form-group">
+						<label for="output_text">result</label>
+						<textarea id="output_text" class="input_area form-control" row="5"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
 </body>
 </html>
