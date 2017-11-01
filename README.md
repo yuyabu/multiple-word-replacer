@@ -1,6 +1,6 @@
 # multiple-word-replacer
 
-This software can replace multiple words with multiple other words
+This script can replace multiple words with multiple other words
 
 ```
 multiWordReplacer(param1,param2,param3);
