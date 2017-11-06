@@ -1,0 +1,29 @@
+{
+  "name": "multiple-word-replacer",
+  "version": "1.0.0",
+  "description": "This script can replace multiple words with multiple other words",
+  "main": "multiple-word-replacer.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuyabu/multiple-word-replacer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuyabu/multiple-word-replacer/issues"
+  },
+  "homepage": "https://github.com/yuyabu/multiple-word-replacer#readme",
+  "devDependencies": {
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "phantomjs-prebuilt": "^2.1.16"
+  }
+}
