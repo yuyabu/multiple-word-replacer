@@ -1,3 +1,11 @@
+/**
+ * entory point of program.
+ * change text with given dictionary(tsv/csv)
+ * @param  {String} inputedDictionary  2column csv(character-separated values) format.
+ * @param  {String} selected_separeter symbol which separate inputedDictionary
+ * @param  {String} textForConvert     conversion target
+ * @return {String}                    converted result
+ */
 function multiWordReplacer(inputedDictionary,selected_separeter, textForConvert){
 	let mapForConvert = makeMap(inputedDictionary, separeter[selected_separeter]);
 	let mapKeys = Array.from(mapForConvert.keys());
@@ -12,6 +20,13 @@ function multiWordReplacer(inputedDictionary,selected_separeter, textForConvert)
 	return result;
 }
 
+/**
+ * generate map for convert.
+ * this map made from inputed csv/tsv and separator.
+ * @param  {string} textToMap rule file of convert.csv format.
+ * @param  {String} separator symbol which separate textToMap
+ * @return {Map}              map
+ */
 function makeMap(textToMap,separator){
 	let lines = textToMap.split('\n');
 	let forAlert = '';
