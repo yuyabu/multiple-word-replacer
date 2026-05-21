@@ -37,3 +37,21 @@ I have a dog, a goat, and a cat.
 ```
 
 note:this script is prototype version.
+
+## Development
+
+### Requirements
+
+- Node.js 14 or higher
+
+### Setup
+
+```bash
+npm install
+```
+
+### Run tests
+
+```bash
+npm test
+```

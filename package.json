@@ -1,0 +1,26 @@
+{
+  "name": "multiple-word-replacer",
+  "version": "1.0.0",
+  "description": "This script can replace multiple words with multiple other words",
+  "main": "multiple-word-replacer.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuyabu/multiple-word-replacer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuyabu/multiple-word-replacer/issues"
+  },
+  "homepage": "https://github.com/yuyabu/multiple-word-replacer#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
