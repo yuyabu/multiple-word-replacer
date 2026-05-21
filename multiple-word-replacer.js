@@ -41,3 +41,7 @@ function makeMap(textToMap,separator){
 	}
 	return resultMap;
 }
+
+if (typeof module !== 'undefined') {
+	module.exports = { multiWordReplacer, makeMap };
+}
